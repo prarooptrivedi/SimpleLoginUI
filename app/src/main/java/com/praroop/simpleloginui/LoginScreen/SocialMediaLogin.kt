@@ -36,6 +36,7 @@ fun SocialMediaLogin(
 ) {
     Row(
         modifier = modifier
+            .height(40.dp)
             .clip(RoundedCornerShape(4.dp))
             .socialMedia()
             .clickable { onClick },

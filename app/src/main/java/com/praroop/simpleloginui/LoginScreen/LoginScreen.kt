@@ -76,7 +76,7 @@ private fun LoginSection() {
     LoginTextField(label = "Password", traling = "Forget", modifier = Modifier.fillMaxWidth())
     Spacer(modifier = Modifier.height(20.dp))
     Button(
-        modifier = Modifier.height(40.dp),
+        modifier = Modifier.height(40.dp).fillMaxWidth(),
         onClick = {},
         colors = ButtonDefaults.buttonColors(
             containerColor = if (!isSystemInDarkTheme()) BlueGray else Black,
