@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "569285059659",
+    "project_id": "sipsplit-62836",
+    "storage_bucket": "sipsplit-62836.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:569285059659:android:6ed1b76febcdfd63ad99ce",
+        "android_client_info": {
+          "package_name": "com.sipsplit"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCGWwJF9oaHR6aO8HKNzOQfonWz0SISI3g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

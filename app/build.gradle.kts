@@ -2,14 +2,15 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
+
 }
 
 android {
-    namespace = "com.praroop.simpleloginui"
+    namespace = "com.sipsplit"//sipsplit
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "com.praroop.simpleloginui"
+        applicationId = "com.sipsplit"
         minSdk = 24
         targetSdk = 35
         versionCode = 1
@@ -56,6 +57,12 @@ dependencies {
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
-    implementation ("androidx.compose.foundation:foundation:1.6.1")
-    implementation ("androidx.navigation:navigation-compose:2.6.0")
+    implementation (libs.androidx.foundation)
+    implementation (libs.androidx.navigation.compose)
+    // Firebase Auth
+    implementation(libs.firebase.auth.ktx)
+// Firebase BOM (Bill of Materials to manage versions)
+    implementation(libs.firebase.bom)
 }
+// ✅ Apply Google Services Plugin (IMPORTANT)
+apply(plugin = "com.google.gms.google-services")
