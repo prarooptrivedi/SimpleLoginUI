@@ -12,6 +12,8 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import com.praroop.simpleloginui.LoginScreen.LoginScreen
+import com.praroop.simpleloginui.Testing.ExampleOne
+import com.praroop.simpleloginui.contact.ContactAppNavigator
 import com.praroop.simpleloginui.ui.theme.SimpleLoginUITheme
 
 class MainActivity : ComponentActivity() {
@@ -20,7 +22,8 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             SimpleLoginUITheme {
-               LoginScreen()
+
+                ContactAppNavigator()
             }
         }
     }
