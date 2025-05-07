@@ -15,6 +15,9 @@ import com.google.firebase.FirebaseApp
 import com.praroop.simpleloginui.LoginScreen.LoginScreen
 import com.praroop.simpleloginui.Testing.ExampleOne
 import com.praroop.simpleloginui.contact.ContactAppNavigator
+import com.praroop.simpleloginui.side_effect.drived_stateOf.DrivedStateOf
+import com.praroop.simpleloginui.side_effect.produce_stateOf.Loader
+import com.praroop.simpleloginui.side_effect.produce_stateOf.ProduceStateOf
 import com.praroop.simpleloginui.ui.theme.SimpleLoginUITheme
 
 class MainActivity : ComponentActivity() {
@@ -25,7 +28,9 @@ class MainActivity : ComponentActivity() {
         setContent {
             SimpleLoginUITheme {
 
-                ContactAppNavigator()
+//                ContactAppNavigator()
+//                ProduceStateOf()
+                DrivedStateOf()
             }
         }
     }
