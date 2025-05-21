@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.util.Log
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.compose.material3.Button
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.LaunchedEffect
@@ -12,31 +13,41 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberUpdatedState
 import kotlinx.coroutines.delay
 
-class RememberUpdateStateApp : ComponentActivity() {
+class RememberUpdateStateAppSecond : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            App()
+            Apps()
         }
     }
 }
 
-@Composable
-fun App() {
-    var counter = remember { mutableStateOf(0) }
-    LaunchedEffect(key1 = Unit) {
-        delay(2000)
-        counter.value = 10
-    }
-    Counters(counter.value)
+fun a() {
+    Log.d("PraroopOne", "I am A  from app")
+}
+
+fun b() {
+    Log.d("PraroopOne", "I am B from app")
 }
 
 @Composable
-fun Counters(value: Int) {
-    val state= rememberUpdatedState(newValue = value)
-    LaunchedEffect(key1 = Unit) {
-        delay(5000)
-        Log.d("PraroopCode",state.value.toString())
+fun Apps() {
+    var state = remember { mutableStateOf(::a) }
+    Button(onClick = {
+        state.value = ::b
+    }) {
+        Text(text = "Click to change state")
     }
-    Text(text = value.toString())
+    LandingScreen(state.value)
+
+}
+
+@Composable
+fun LandingScreen(onTimeOut:()->Unit) {
+    val currentOnTimeout= rememberUpdatedState(onTimeOut)
+    LaunchedEffect(true) {
+        delay(1000)
+        currentOnTimeout.value()
+    }
+
 }
