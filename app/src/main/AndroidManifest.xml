@@ -14,8 +14,19 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SimpleLoginUI"
         tools:targetApi="31">
-        <activity
-            android:name="com.praroop.simpleloginui.MainActivity"
+<!--        <activity-->
+<!--            android:name="com.praroop.simpleloginui.MainActivity"-->
+<!--            android:exported="true"-->
+<!--            android:label="@string/app_name"-->
+<!--            android:theme="@style/Theme.SimpleLoginUI">-->
+<!--            <intent-filter>-->
+<!--                <action android:name="android.intent.action.MAIN" />-->
+
+<!--                <category android:name="android.intent.category.LAUNCHER" />-->
+<!--            </intent-filter>-->
+<!--        </activity> -->
+    <activity
+            android:name="com.praroop.simpleloginui.side_effect.remember_coroutine_scope.RememberCoroutineScopeApp"
             android:exported="true"
             android:label="@string/app_name"
             android:theme="@style/Theme.SimpleLoginUI">
