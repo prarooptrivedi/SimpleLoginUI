@@ -53,7 +53,7 @@ fun Loader() {
     val degree = produceState(initialValue = 0) {
         while (true) {
             delay(15)
-            value = (value + 30) % 360
+            value = (value + 8000) % 360
         }
     }
     Box(
