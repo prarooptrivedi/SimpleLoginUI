@@ -50,6 +50,8 @@ dependencies {
     implementation(libs.androidx.ui.graphics)
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.material3)
+    implementation(libs.androidx.appcompat)
+    implementation(libs.androidx.activity)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
@@ -63,6 +65,23 @@ dependencies {
     implementation(libs.firebase.auth.ktx)
 // Firebase BOM (Bill of Materials to manage versions)
     implementation(libs.firebase.bom)
+    //
+    implementation(libs.coil.compose)
+    implementation(libs.coil.network.okhttp)
+    implementation(libs.accompanist.pager)
+    implementation(libs.accompanist.pager.indicators)
+    implementation (libs.glide)
+    implementation (libs.gson)
+    implementation(libs.androidx.constraintlayout.compose)
+    implementation(libs.foundation)
+    debugImplementation(libs.ui.tooling)
+    implementation(libs.material)
+    implementation(libs.ui.tooling)
+
+
+
+
+
 }
 // ✅ Apply Google Services Plugin (IMPORTANT)
 apply(plugin = "com.google.gms.google-services")
