@@ -29,9 +29,10 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
+import com.praroop.simpleloginui.R
 import com.praroop.simpleloginui.ui.theme.Black
 import com.praroop.simpleloginui.ui.theme.BlueGray
-import com.sipsplit.R
+
 
 @Composable
 fun LoginScreen() {

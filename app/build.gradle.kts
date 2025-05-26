@@ -3,6 +3,10 @@ plugins {
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
 
+    alias(libs.plugins.ksp)
+    alias(libs.plugins.hilt)
+    alias(libs.plugins.kotlin.serialization)
+
 }
 
 android {
@@ -52,6 +56,7 @@ dependencies {
     implementation(libs.androidx.material3)
     implementation(libs.androidx.appcompat)
     implementation(libs.androidx.activity)
+    implementation(libs.firebase.common.ktx)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
@@ -77,6 +82,19 @@ dependencies {
     debugImplementation(libs.ui.tooling)
     implementation(libs.material)
     implementation(libs.ui.tooling)
+
+    // Network
+    implementation("com.jakewharton.retrofit:retrofit2-kotlinx-serialization-converter:0.8.0")
+    implementation(libs.retrofit.core)
+    implementation(libs.okhttp)
+    implementation(libs.logging.interceptor.v4120)
+    implementation(libs.kotlinx.serialization.json)
+
+    // dagger Hilt
+    // Hilt for Dependency Injection
+    implementation(libs.hilt.core)
+    ksp(libs.hilt.compiler)
+    implementation (libs.androidx.hilt.navigation.compose)
 
 
 
