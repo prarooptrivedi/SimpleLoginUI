@@ -2,14 +2,15 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
+
 }
 
 android {
-    namespace = "com.praroop.simpleloginui"
+    namespace = "com.sipsplit"//sipsplit
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "com.praroop.simpleloginui"
+        applicationId = "com.sipsplit"
         minSdk = 24
         targetSdk = 35
         versionCode = 1
@@ -49,6 +50,8 @@ dependencies {
     implementation(libs.androidx.ui.graphics)
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.material3)
+    implementation(libs.androidx.appcompat)
+    implementation(libs.androidx.activity)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
@@ -56,5 +59,29 @@ dependencies {
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
-    implementation ("androidx.compose.foundation:foundation:1.6.1")
+    implementation (libs.androidx.foundation)
+    implementation (libs.androidx.navigation.compose)
+    // Firebase Auth
+    implementation(libs.firebase.auth.ktx)
+// Firebase BOM (Bill of Materials to manage versions)
+    implementation(libs.firebase.bom)
+    //
+    implementation(libs.coil.compose)
+    implementation(libs.coil.network.okhttp)
+    implementation(libs.accompanist.pager)
+    implementation(libs.accompanist.pager.indicators)
+    implementation (libs.glide)
+    implementation (libs.gson)
+    implementation(libs.androidx.constraintlayout.compose)
+    implementation(libs.foundation)
+    debugImplementation(libs.ui.tooling)
+    implementation(libs.material)
+    implementation(libs.ui.tooling)
+
+
+
+
+
 }
+// ✅ Apply Google Services Plugin (IMPORTANT)
+apply(plugin = "com.google.gms.google-services")
