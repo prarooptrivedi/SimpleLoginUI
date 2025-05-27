@@ -64,7 +64,7 @@ fun btnPreview(){
         backGroundColor = orange,
         contentColor = white,
         onButtonClick = {},
-        isLoading = true,
+        isLoading = false,
         modifier = Modifier.fillMaxWidth()
     )
 }

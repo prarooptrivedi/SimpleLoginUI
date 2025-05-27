@@ -15,9 +15,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SimpleLoginUI"
         tools:targetApi="31">
-        <activity
-            android:name="com.praroop.resturant.Activity.SplashActivity"
-            android:exported="false" />
+<!--        <activity-->
+<!--            android:name="com.praroop.resturant.Activity.SplashActivity"-->
+<!--            android:exported="false" />-->
+
+        <activity android:name="com.praroop.simpleloginui.MainActivity"
+            android:exported="false"/>
         <!-- <activity -->
         <!-- android:name="com.praroop.simpleloginui.MainActivity" -->
         <!-- android:exported="true" -->
