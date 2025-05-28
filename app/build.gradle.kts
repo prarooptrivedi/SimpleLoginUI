@@ -70,6 +70,9 @@ dependencies {
     implementation(libs.firebase.auth.ktx)
 // Firebase BOM (Bill of Materials to manage versions)
     implementation(libs.firebase.bom)
+
+    testImplementation ("com.google.truth:truth:1.4.4")
+
     //
     implementation(libs.coil.compose)
     implementation(libs.coil.network.okhttp)
@@ -95,9 +98,7 @@ dependencies {
     implementation(libs.hilt.core)
     ksp(libs.hilt.compiler)
     implementation (libs.androidx.hilt.navigation.compose)
-
-
-
+    testImplementation(kotlin("test"))
 
 
 }
